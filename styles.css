@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/*
+   Author: lynwal9390
+   Date: 01/03/2026 
+   
+   Filename: styles.css
+
+*/
+
+/* Background and Font:
+Set a background color
+Implement a readable, web-safe font (e.g., Arial, Helvetica). */
+body {
+    background-color: ivory;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header:
+Align text to the center.
+Change the font size and weight.
+Add padding and a background color to the header section. */
+header {
+    text-align: center;
+    font-size: large;
+    font-weight: 200;
+    padding: 0.4em;
+    background-color: gray;
+}
+
+/* Navigation Menu:
+Style the section list to appear horizontally.
+Remove bullet points.
+Add hover effects for links (Background or text color changes). */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+    
+    a:hover {
+        background-color: blue;
+        text-decoration: underline;
+        color: white;
+    }
+}
+
+/* Main Sections:
+Add padding and margin to each section.
+Use borders, box shadows, or background colors to distinguish content areas. */
+main {
+    
+    #about {
+        background-color: hsla(0, 100%, 30%, 0.5);
+        padding: 15px;
+        margin: 50px auto;
+    }
+    #projects {
+        background-color: hsla(120, 100%, 30%, 0.5);
+        padding: 15px;
+        margin: 50px auto;
+    }
+    #contact {
+        background-color: hsla(240, 100%, 30%, 0.5);
+        padding: 15px;
+        margin: 50px auto;
+    }
+}
+
+
+
+/* Footer:
+Implement a smaller font.
+Align text to the center.
+Use a contrasting background and text color. */
+footer {
+    font-size: smaller;
+    text-align: center;
+    background-color: cyan;
+    color: black;
+}
+
+
+
