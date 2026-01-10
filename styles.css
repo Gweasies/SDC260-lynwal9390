@@ -2,7 +2,7 @@
 
 /*
    Author: lynwal9390
-   Date: 01/03/2026 
+   Date: 01/10/2026 
    
    Filename: styles.css
 
@@ -38,37 +38,66 @@ nav ul {
     justify-content: center;
 
     gap: 15px;
-    
-    a:hover {
-        background-color: blue;
-        text-decoration: underline;
-        color: white;
-    }
 }
+
+nav a {
+    transition: background-color 0.3 ease;
+}
+nav a:hover {
+    background-color: blue;
+    text-decoration: underline;
+    color: white;
+}
+
 
 /* Main Sections:
 Add padding and margin to each section.
 Use borders, box shadows, or background colors to distinguish content areas. */
-main {
-    
-    #about {
-        background-color: hsla(0, 100%, 30%, 0.5);
-        padding: 15px;
-        margin: 50px auto;
-    }
-    #projects {
-        background-color: hsla(120, 100%, 30%, 0.5);
-        padding: 15px;
-        margin: 50px auto;
-    }
-    #contact {
-        background-color: hsla(240, 100%, 30%, 0.5);
-        padding: 15px;
-        margin: 50px auto;
-    }
+ 
+main #about {
+    background-color: hsla(0, 100%, 30%, 0.5);
+    padding: 15px;
+    margin: 50px auto;
+}
+main #projects {
+    background-color: hsla(120, 100%, 30%, 0.5);
+    padding: 15px;
+    margin: 50px auto;
+}
+main #contact {
+    background-color: hsla(240, 100%, 30%, 0.5);
+    padding: 15px;
+    margin: 50px auto;
+}
+
+/* Implement a zoom in on hover with a 
+smooth transition effect for each main content section. */
+main section {
+    transition: transform 0.3s ease;
+}
+
+main section:hover {
+    transform: scale(1.02);
 }
 
 
+
+/* Style the table with borders, 
+padding, full width, and header background color. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid blueviolet;
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: yellow;
+}
 
 /* Footer:
 Implement a smaller font.
