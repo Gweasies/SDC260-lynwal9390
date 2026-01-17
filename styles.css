@@ -14,6 +14,8 @@ Implement a readable, web-safe font (e.g., Arial, Helvetica). */
 body {
     background-color: ivory;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header:
@@ -24,7 +26,7 @@ header {
     text-align: center;
     font-size: large;
     font-weight: 200;
-    padding: 0.4em;
+    padding: 20px;
     background-color: gray;
 }
 
@@ -32,27 +34,55 @@ header {
 Style the section list to appear horizontally.
 Remove bullet points.
 Add hover effects for links (Background or text color changes). */
-nav ul {
+.nav-menu {
     list-style: none;
     display: flex;
     justify-content: center;
-
-    gap: 15px;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
-nav a {
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
     transition: background-color 0.3 ease;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
 }
-nav a:hover {
+.nav-menu a:hover {
     background-color: blue;
     text-decoration: underline;
     color: white;
+    
 }
 
 
 /* Main Sections:
 Add padding and margin to each section.
 Use borders, box shadows, or background colors to distinguish content areas. */
+
+/* Main layout using Flexbox */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 10%;
+}
+
+.flex-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
  
 main #about {
     background-color: hsla(0, 100%, 30%, 0.5);
@@ -68,6 +98,27 @@ main #contact {
     background-color: hsla(240, 100%, 30%, 0.5);
     padding: 15px;
     margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input, textarea {
+    transition: border-color 0.3s ease;
+}
+
+button#submit {
+    transition: background-color 0.3s ease;
+}
+
+
+input:hover, button:hover, textarea:hover {
+    background-color: red;
+}
+
+input:focus, button:focus, textarea:focus {
+    background-color: violet;
 }
 
 /* Implement a zoom in on hover with a 
@@ -79,6 +130,36 @@ main section {
 main section:hover {
     transform: scale(1.02);
 }
+
+/* Responsive Media Quieries */
+@media (max-width: 767px) {
+    /* Phone */
+    main{
+        padding: 20px 5%;
+    }
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-menu li {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Tablet */
+    main {
+        padding: 25px 8%;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Desktop */
+    main {
+        padding: 30px 15%;
+    }
+}
+
 
 
 
@@ -106,6 +187,7 @@ Use a contrasting background and text color. */
 footer {
     font-size: smaller;
     text-align: center;
+    padding: 15px;
     background-color: cyan;
     color: black;
 }

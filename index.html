@@ -31,7 +31,7 @@
     <!--Navigation Menu with internal links-->
     <nav>
         <!--List with hyperlinks and names-->
-        <ul>
+        <ul class="nav-menu">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -42,22 +42,22 @@
     <main>
 
         <!--Section has an ID, header, and paragraph-->
-        <section id="about">
+        <section id="about" class="flex-section">
             <header>
-                <h2>About</h2>
+                <h2>About Me</h2>
             </header>
             <p>
-                About the page
+                My favorite color is cyan
             </p>
         </section>
 
         <!--Section has an ID, header, and paragraph-->
-        <section id="projects">
+        <section id="projects" class="flex-section">
             <header>
                 <h2>Projects</h2>
             </header>
             <p>
-                Projects listed
+                Projects I have contributed to
             </p>
 
             <table>
@@ -101,13 +101,22 @@
         </section>
 
         <!--Section has an ID, header, and paragraph-->
-        <section id="contact">
+        <section id="contact" class="flex-section">
             <header>
                 <h2>Contact</h2>
             </header>
-            <p>
-                Contact Information
-            </p>
+            <p>Contact Information</p>
+            <label for="contact">Contact Form</label>
+            <label for="sender">Sender</label>
+            <input type="text" name="Sender Name" id="sender" required>
+            <label for="email">Email</label>
+            <input type="email" name="Email Address" id="email" required>
+            <label for="subject">Subject</label>
+            <input type="text" name="Subject" id="subject">
+            <label for="message">Message</label>
+            <textarea name="Message" id="message" rows="5"></textarea>
+            <label for="submit">Submit</label>
+            <button type="submit">Submit</button>
         </section>
 
     </main>    
